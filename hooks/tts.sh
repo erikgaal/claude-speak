@@ -138,8 +138,8 @@ summarize_for_speech() {
   if command -v claude &>/dev/null; then
     log "summarize: calling claude (model=$SUMMARIZE_MODEL)"
     local summary
-    summary="$(echo "$truncated" | claude -p --model "$SUMMARIZE_MODEL" --effort low \
-      "Summarize this Claude Code response for text-to-speech in 1-2 short sentences. Make it natural spoken English: no markdown, no code symbols, no URLs, no special characters. Convert technical terms into plain speech. Focus on what was accomplished." 2>/dev/null)" || summary=""
+    summary="$(echo "$truncated" | CLAUDE_CODE_REMOTE=1 claude -p --model "$SUMMARIZE_MODEL" --effort low \
+      --system-prompt "Summarize this Claude Code response for text-to-speech in 1 short sentence. Make it natural spoken English: no markdown, no code symbols, no URLs, no special characters. Convert technical terms into plain speech. Focus on what was accomplished." 2>/dev/null)" || summary=""
     if [[ -n "$summary" ]]; then
       log "summarize: claude returned: \"$summary\""
       echo "$summary"
