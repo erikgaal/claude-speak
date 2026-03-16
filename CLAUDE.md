@@ -32,6 +32,14 @@ brew install espeak-ng ffmpeg jq
 claude plugins add /path/to/claude-speak
 ```
 
+## Environment Variables
+
+- `CLAUDE_TTS_VOICE` — Kokoro voice name (default: `am_eric`)
+- `CLAUDE_TTS_SPEED` — Speech speed (default: `1.1`)
+- `CLAUDE_TTS_MODEL` — Claude model for summarization (default: `claude-haiku-4-5-20251001`)
+
+To enable verbose logging to stderr, add `-v` to the command in `hooks.json`.
+
 ## Key Design Decisions
 
 - Fire-and-forget async TTS requests to avoid blocking Claude Code
