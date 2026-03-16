@@ -1,0 +1,7 @@
+{
+  "name": "claude-speak",
+  "description": "Text-to-speech for Claude Code using Kokoro TTS",
+  "author": {
+    "name": "Erik Gaal"
+  }
+}
