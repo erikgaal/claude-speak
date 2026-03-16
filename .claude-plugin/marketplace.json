@@ -1,0 +1,25 @@
+{
+  "name": "claude-speak-marketplace",
+  "owner": {
+    "name": "Erik Gaal"
+  },
+  "metadata": {
+    "description": "Text-to-speech plugins for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "claude-speak",
+      "source": "./",
+      "description": "Text-to-speech for Claude Code using Kokoro TTS — speaks notifications and response summaries aloud",
+      "version": "1.0.0",
+      "author": {
+        "name": "Erik Gaal"
+      },
+      "repository": "https://github.com/erikgaal/claude-speak",
+      "license": "MIT",
+      "keywords": ["tts", "text-to-speech", "audio", "kokoro", "accessibility"],
+      "category": "accessibility",
+      "tags": ["macos", "tts", "speech", "audio"]
+    }
+  ]
+}

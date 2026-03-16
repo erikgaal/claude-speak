@@ -1,6 +1,7 @@
 {
   "name": "claude-speak",
   "description": "Text-to-speech for Claude Code using Kokoro TTS",
+  "version": "1.0.0",
   "author": {
     "name": "Erik Gaal"
   }
